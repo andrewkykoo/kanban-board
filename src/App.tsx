@@ -8,14 +8,17 @@ export const App = () => {
   const { lists, dispatch } = useAppState();
 
   return (
-    <AppContainer>
-      {lists.map((list) => (
-        <Column key={list.id} text={list.text} id={list.id} />
-      ))}
-      <AddNewItem
-        onAdd={(text) => dispatch(addList(text))}
-        toggleButtonText="+ Add another list"
-      />
-    </AppContainer>
+    <>
+      <h1>Kanban Board</h1>
+      <AppContainer>
+        {lists.map((list) => (
+          <Column key={list.id} text={list.text} id={list.id} />
+        ))}
+        <AddNewItem
+          onAdd={(text) => dispatch(addList(text))}
+          toggleButtonText="+ Add another list"
+        />
+      </AppContainer>
+    </>
   );
 };
