@@ -10,7 +10,8 @@ export const App = () => {
 
   return (
     <>
-      <h1>Kanban Board</h1>
+      <h1>Kanban Board </h1>
+      <p>w/ draggable cards and lists</p>
       <AppContainer>
         <CustomDragLayer />
         {lists.map((list) => (
